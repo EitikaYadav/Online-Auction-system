@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    
+    <title>post</title>
+  
+</head>
+
+<body>
+   
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="/images/Auctionlogo.png"  width="110px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Auctions</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Account</a></li>
+            </ul>
+        </nav>
+        <a href="/userinsights"><img src="/images/cart.png" width="30px" height="30px"></a>
+    </div>
+</div>
+
+ 
+  
+     <!-- sigle product <details> -->
+   <div class="smallcontainer single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="<%=data.image %>" width="100%">
+        </div>
+        <div class="col-2">
+            
+            <h2><%= data.Brand %></h1>
+                <h3><%= data.Title %></h2>
+            <h4><%= data.Price %></h4>
+            <input type="text" name="value" value="<%= data.Price %>">
+            <a href="/cart/<%=data._id %>" class="btnbid">Bid</a>
+        
+             <h3>Product Details</h3>
+            <p><%= data.Description %></p>
+        </div>
+    </div>
+   </div>
+<!-- title -->
+   <div class="smallcontainer">
+   <div class="row row-2">
+    <h2>Related Product</h2>
+    <p>View More</p>
+
+   </div>
+   </div>
+       <div class="smallcontainer">
+       
+        <div class="row">
+            <div class="col-4">
+                <img src="/images/product-1.jpg">
+                <h4>Red printed tshirt</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="/images/product-2.jpg">
+                <h4>Red printed tshirt</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="/images/product-3.jpg">
+                <h4>Red printed tshirt</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="/images/product-4.jpg">
+                <h4>Red printed tshirt</h4>
+                <p>$50.00</p>
+            </div>
+          
+        </div>
+       </div>
+
+               <!-- footer -->
+
+               <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android And Ios</p>
+                            <div class="applogo">
+                                <img src="/images/play-store.png" alt="">
+                                <img src="/images/app-store.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <img src="/images/logo-white.png" alt="">
+                            <p>Our purpose Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="footer-col-3">
+                           <h3>Useful Links</h3>
+                            <ul>
+                                <li>Coupons</li>
+                                <li>Blog Post</li>
+                                <li>Return Policy</li>
+                                <li>join Affiliate</li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-4">
+                           <h3>Follow Us</h3>
+                           <ul>
+                            <li>Facebook</li>
+                            <li>Twitter X</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="Copyright">Copyright 2024</p>
+                </div>
+               </div>
+</body>
+</html>

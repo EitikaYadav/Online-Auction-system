@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./stylesheet.css"> -->
+    <title>Sign-Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* background-color: #4199FD; */
+            background-image: radial-gradient(circle, #03243e 0%, #03243e 100%);
+            height: 100vh;
+            opacity: 0.98;
+        }
+
+        * {
+            padding: auto;
+            margin: auto;
+            text-align: centre;
+        }
+
+        .header {
+            background: white;
+            border-bottom: solid 1px;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bolder;
+            text-transform: capitalize;
+            font-size: 2rem;
+
+        }
+
+        .main {
+            height: auto;
+            width: 400px;
+            /* border: 3px solid black; */
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 0 100px #104166;
+            position: absolute;
+            top: 192px;
+            left: 565px;
+            border-radius: 5px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .heading {
+            margin: 10px;
+            text-align: center;
+            text-transform: capitalize;
+
+        }
+
+        .formData {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+            margin: 2px 2px;
+        }
+        .formData:hover {
+           transform: scale(1.1);
+        }
+
+       .enter{
+        font-size: 1.2rem;
+       }
+
+        .invalue {
+            background-color: rgb(171, 176, 171);
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            text-align: center;
+
+
+        }
+
+        .invalue:hover {
+            cursor: pointer;
+            background-color: rgb(69, 71, 69);
+            color: white;
+            font-weight: 300;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+        
+
+        .sbmt {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: rgb(176, 26, 26);
+            color: white;
+            padding: 4px 7px;
+            margin: 10px;
+        }
+        .sbmt:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background-color: green;
+            border: none;
+        }
+
+        #already {
+            margin: 4px 4px;
+            padding: 2px 2px;
+           background-color: white;
+           border-radius: 4px;
+           border: none;
+           text-decoration: underline;
+        }
+        #already:hover{
+            cursor: pointer;
+            scale: 1.02;
+        }
+
+        .footer {
+            border-top: solid 1px;
+            background: white;
+            width: 100%;
+            height: 30px;
+            padding-top: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            font-size: 1.3em;
+         }
+    </style>
+</head>
+
+<body>
+    <%
+if(typeof message!=='undefined'){
+    %>
+    <p style="color: red;"> <%= message %> </p>
+    <%
+} 
+
+
+%>
+    <header class="header">My Auction</header>
+    <div class="main">
+        <h1 class="heading">Create-Account</h1>
+        <div class="center">
+
+            <form action="" method="POST">
+                <div class="formData">
+                    <p class="enter">Enter Full Name : </p>
+                    <input class="invalue" id="name" name="name" placeholder="Enter your Name" />
+                </div>
+                <div class="formData">
+                    <p class="enter">Enter e-mail : </p>
+                    <input class="invalue" id="email" name="email" placeholder="Enter your email" />
+                </div>
+                <div class="formData">
+                    <p class="enter">Enter mobile number : </p>
+                    <input class="invalue" id="mobile" name="mobile" placeholder="Enter your number" />
+                </div>
+                <div class="formData">
+                    <p class="enter">Set Password : </p>
+                    <input class="invalue" id="password" name="password" placeholder="Enter password" />
+                </div>
+                <!-- <div class="formData">
+                    <p class="enter">Confirm Password : </p>
+                    <input class="invalue" id="cnfpassword" name="cnfpassword" placeholder="Re-enter password" />
+                </div> -->
+                <button class="sbmt">Submit</button>
+            </form>
+            <button id="already"><a href="/login">already an user?</a></button>
+        </div>
+    </div>
+    <footer class="footer">copyright ©️ 2024</footer>
+
+</body>
+
+</html>

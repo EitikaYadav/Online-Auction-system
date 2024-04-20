@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <title>Auction System</title>
+
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/Auctionlogo.png"  width="110px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Auctions</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="/account">Account</a></li>
+            </ul>
+        </nav>
+        <a href="/userinsights"><img src="images/cart.png" width="30px" height="30px"></a>
+    </div>
+    <div class="row">
+        <div class="col-2">
+           <h1>Start Bidding on Exclusive Auctions Today</h1>
+          <p>Welcome to [Your Service Name], where bidding meets convenience. Explore our diverse range of auctions, from antiques to electronics, and bid confidently with our secure platform.</p>
+            <a href="/products" class="btn">Explore Now &#8594;</a>
+        </div>
+        <div class="col-2">
+            <img src="/images/homepage.png" alt="" style="position: relative; top: 54px; left: 100px;">
+        </div>
+    </div>
+</div>
+</div>
+
+     <!-- featured categories -->
+     <div class="categories">
+        <div class="smallcontainer">
+        <div class="row">
+            <div class="col-3">
+                <img src="images/category-1.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="images/category-2.jpg" alt="">
+            </div>
+            <div class="col-3"> <img src="images/category-3.jpg" alt=""></div>
+        </div>
+    </div>
+     </div> 
+  
+       <!-- featured Products -->
+
+       <div class="smallcontainer">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+        <% if(data.length>0){
+            for(let i=0; i< data.length ; i++){
+                %>
+                <div class="col-4"> 
+                    <img src="<%=data[i].image %>">
+                    <h4><%=data[i].Brand %></h4>
+                    <p><%=data[i].Title %></p>
+                    <a href="/post/<%= data[i]._id %>" class="btn">More Details</a>
+                </div>
+                <% 
+            }
+        }
+        %>
+            <!-- <div class="col-4"> 
+                <img src="images/product-1.jpg">
+                <h4>Red printed tshirt</h4>
+                <p>$50.00</p>
+                <a href="product-details.html" class="btn">More Details</a>
+            </div> -->
+
+
+        </div>
+       </div>
+       
+          <!-- offer -->
+
+          <div class="offer">
+            <div class="smallcontainer">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/exclusive.png" class="offerimg">
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusively Available For Auction</p>
+                        <h1>Smart Band 4</h1>
+                        <small>
+                            The Mi Band resembles a bracelet in its design, and can be worn on either hand.
+                        </small>
+                        <a href="" class="btn">Bid Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+            <!-- brands -->
+
+            <div class="brands">
+                <div class="smallcontainer">
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="images/logo-godrej.png" alt="">
+                        </div>
+                        <div class="col-5">
+                            <img src="images/logo-oppo.png" alt="">
+                        </div>
+                        <div class="col-5">
+                            <img src="images/logo-paypal.png" alt="">
+                        </div>
+                        <div class="col-5">
+                            <img src="images/logo-philips.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+
+               <!-- footer -->
+
+               <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android And Ios</p>
+                            <div class="applogo">
+                                <img src="images/play-store.png" alt="">
+                                <img src="images/app-store.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <img src="" alt="">
+                            <p>Our purpose Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="footer-col-3">
+                           <h3>Useful Links</h3>
+                            <ul>
+                                <li>Coupons</li>
+                                <li>Blog Post</li>
+                                <li>Return Policy</li>
+                                <li>join Affiliate</li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-4">
+                           <h3>Follow Us</h3>
+                           <ul>
+                            <li>Facebook</li>
+                            <li>Twitter X</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="Copyright">Copyright 2024</p>
+                </div>
+               </div>
+</body>
+</html>

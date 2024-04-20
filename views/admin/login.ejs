@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* background-color: #4199FD; */
+            background-image: radial-gradient(circle, #03243e 0%, #03243e 100%);
+            height: 100vh;
+            opacity: 0.90;
+        }
+
+        * {
+            padding: auto;
+            margin: auto;
+            text-align: centre;
+        }
+
+        .header {
+            background: white;
+            border-bottom: solid 1px;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: bolder;
+            text-transform: capitalize;
+            font-size: 2rem;
+
+        }
+        .main {
+            height: auto;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 0 100px #104166;
+            position: absolute;
+            top: 230px;
+            left: 625px;
+          
+        }
+
+        .heading {
+            margin: 10px;
+            text-align: center;
+            text-transform: capitalize;
+
+        }
+        .center {
+            text-align: center;
+        }
+        .formData {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+            margin: 2px 2px;
+
+        }
+        .invalue {
+            background-color: rgb(171, 176, 171);
+            border: none;
+            outline: none;
+            text-align: left;
+            margin: 4px 0;
+            padding: 3px 4px;
+           
+        }
+
+        .invalue:hover {
+            cursor: pointer;
+            background-color: rgb(69, 71, 69);
+            color: white;
+            font-weight: 300;
+            transform: scale(1.01);
+        }
+
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+       
+        .lgn {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: rgb(176, 26, 26);
+            color: white;
+            padding: 4px 7px;
+            margin: 10px;
+        }
+        .lgn:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background-color: green;
+            border: none;
+        }
+        .rem{
+            margin: 4px 4px;
+            padding: 3px 4px;
+        }
+        .icin{
+            display: flex;
+            flex-direction: row;
+            width: 180px;
+            
+        }
+        .icin .fa{
+            width: 10%;
+            background-color: rgb(171, 176, 171);
+            height:22px ;
+            color: white;
+            
+        }
+        
+        .icin .fa:hover{
+            cursor: pointer;
+            background-color: rgb(69, 71, 69);
+            color: white;
+            font-weight: 300;
+            transform: scale(1.01);
+        }
+         .icin #name{
+            width: 90%;
+         }
+         .icin #pass{
+            width: 90%;
+         }
+        .footer {
+            border-top: solid 1px;
+            background: white;
+            width: 100%;
+            height: 30px;
+            padding-top: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <%
+    if(typeof message!=='undefined'){
+        %>
+        <p style="color:bisque; text-align: center;"> <%= message %> </p>
+        <%
+    } 
+    
+    
+    %>
+    <header class="header">My Auction</header>
+    <div class="main">
+        <h1 class="heading">Admin Login</h1>
+        
+        <div class="center">
+            <form action="" method="POST">
+                <div class="formData">
+                   <div class="icin">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input class="invalue" id="name" name="email" placeholder="E-mail"/>
+                </div>
+                <div class="icin">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" class="invalue" id="pass" name="password" placeholder="Password"/>
+                </div>
+                </div>
+                <button class="lgn">Login</button>  
+            </form>
+            <input type="checkbox" checked="checked" class="rem"> 
+                Remember Me
+        </div>
+    </div>
+    <footer class="footer">copyright ©️ 2024</footer>
+</body>
+
+</html>

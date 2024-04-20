@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    
+    <title>All Products-RedStore</title>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <h3>Username : <%= data.name %></h4>
+            <button class="btn"><a href="/logout-user">Logout</a></button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Auctions</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="/account">Account</a></li>
+            </ul>
+        </nav>
+        <a href="/userinsights"><img src="images/cart.png" width="30px" height="30px"></a>
+    </div>
+</div>
+
+             <!-- account page -->
+
+
+       <div class="account-page">
+       <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" alt="">
+            </div>
+           
+
+        </div>
+       </div>
+       </div>
+
+               <!-- footer -->
+
+               <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android And Ios</p>
+                            <div class="applogo">
+                                <img src="images/play-store.png" alt="">
+                                <img src="images/app-store.png" alt="">
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <img src="images/logo-white.png" alt="">
+                            <p>Our purpose Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        </div>
+                        <div class="footer-col-3">
+                           <h3>Useful Links</h3>
+                            <ul>
+                                <li>Coupons</li>
+                                <li>Blog Post</li>
+                                <li>Return Policy</li>
+                                <li>join Affiliate</li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-4">
+                           <h3>Follow Us</h3>
+                           <ul>
+                            <li>Facebook</li>
+                            <li>Twitter X</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="Copyright">Copyright 2024</p>
+                </div>
+               </div>
+               <script>
+                var loginform=document.getElementById('Loginform')
+                var regform=document.getElementById('regform')
+                var indicator=document.getElementById('indicator')
+
+                function register(){
+                    regform.style.transform="translateX(0px)"
+                    loginform.style.transform="translateX(0px)"
+                    indicator.style.transform="translateX(100px)"
+                }
+                function login(){
+                    regform.style.transform="translateX(300px)"
+                    loginform.style.transform="translateX(300px)"
+                    indicator.style.transform="translateX(0px)"
+                }
+               </script>
+</body>
+</html>
